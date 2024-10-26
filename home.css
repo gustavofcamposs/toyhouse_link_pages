@@ -23,19 +23,6 @@ html{
 }
 
 
-/* Menu Hamburguer */
-#hamburguer {
-    display: none; /* O menu fica escondido */
-}
-.container_menu_hamburguer{
-    display: none;
-    position: absolute;
-}
-.header-hamburguer{
-    display: none;
-}
-/*Fim Menu Hamburguer*/
-
 
 .header {
     display: flex;
@@ -126,19 +113,7 @@ html{
 }
 
 
-/* Esse container só ficara visível a partir do breakpoint 800 para baixo*/
-/* Diz respeito ao container aonde fica o icon do Hamburguer*/
-.container_icon{
-    display: none;
 
-    width: 10%;
-    height: 90%;
-}
-
-#Icone_ClickBurguer{
-    display: none;
-}
-/*FIM*/
 
 
 .input__container {
@@ -216,8 +191,6 @@ html{
 
     height: 90%;
     width: 10%;
-
-    /*border: red solid 1px;*/
 }
 
 
@@ -226,8 +199,7 @@ html{
 
 
 
-
-
+/* Menu */
 .menu{
   display: flex;
   
@@ -235,8 +207,6 @@ html{
   align-items: center;
   
   flex-direction: column;
-
-  /*background-color: #596778;*/
 
   height: 100%;
   max-width: 100%;
@@ -249,20 +219,19 @@ html{
   border-radius: 100%;
   width: 70px;
   color: #FFFFFF;
-  -webkit-transition: -webkit-transform ease-out 200ms;
-  transition: -webkit-transform ease-out 200ms;
-  transition: transform ease-out 200ms;
-  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 
   width: 85px;
   height: 85px;
 }
 
+
 .menu-item{
-  position: absolute;
   display: flex;
+
   align-items: center;
   justify-content: center;
+
+  position: absolute;
 }
 
 /*Começa none e só aparece quando o menu for checado*/
@@ -270,10 +239,10 @@ html{
   display: none;
 }
 
-
 .menu-open {
   display: none;
 }
+
 
 .lines {
   width: 25px;
@@ -295,16 +264,16 @@ html{
   -webkit-transform: translate3d(0, -8px, 0);
   transform: translate3d(0, -8px, 0);
 }
-
 .line-2 {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-
 .line-3 {
   -webkit-transform: translate3d(0, 8px, 0);
   transform: translate3d(0, 8px, 0);
 }
+
+
 
 .menu-open:checked + .menu-open-button .line-1 {
   -webkit-transform: translate3d(0, 0, 0) rotate(45deg);
@@ -441,11 +410,10 @@ html{
 .menu-open:checked ~ .menu-item:nth-child(9) { /*?*/
   transition-duration: 780ms;
   -webkit-transition-duration: 780ms;
-  -webkit-transform: translate3d(36.58361px, 104.99997px, 0);
 }
 
 .blue {
-  background-color: #669AE1;
+  background-color: #7BC7F5;
   -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
           box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -493,7 +461,7 @@ html{
 }
 
 .orange {
-  background-color: #FC913A;
+  background-color: #FDDE6C;
   -webkit-box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
           box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.12);
