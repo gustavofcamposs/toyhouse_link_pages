@@ -181,7 +181,6 @@
     }
 
     .itens_nav{
-        background-color: rebeccapurple;
 
         & .menu-item,
           .menu-open-button{
