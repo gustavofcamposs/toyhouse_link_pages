@@ -1,9 +1,10 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/Style/Home/home.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/Style/Home/homeResponsivo.css">
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="./homeResponsivo.css">
 
@@ -17,17 +18,17 @@
 </head>
 
 <body>
-    <!--<script src="../Script/heade.js" defer></script>-->
-    <script src="./headHamburguer.js"></script>
+    <script src="<%= request.getContextPath() %>/Script/Home/headerHamburguer.js"></script>
     <header class="header" id="header">
         <nav class="nav_header">
             <!-- Logotipo com link para a página inicial -->
-            <a href="/" class="logo">
-                <img class="imagem" src="./Image/ToyHouseLogo.jpg" alt="Logotipo da ToyHouse">
+            <a href="${pageContext.request.contextPath}/Pages/Home/home.jsp" class="logo">
+                <!-- <img class="imagem" src="<%= request.getContextPath() %>/Images/Home/ToyHouseLogo.jpg" alt="Logotipo da ToyHouse"> -->
+                <img class="imagem" src="../Image/ToyHouseLogo.jpg">
             </a>
 
             <!-- Formulário de busca -->
-            <form action="/search" method="GET" class="container_search">
+            <form action="${pageContext.request.contextPath}/search" method="GET" class="container_search">
 
                 <div class="input__container">
                     <div class="shadow__input"></div>
@@ -44,21 +45,25 @@
 
             </form>
 
-            <div class="container_icon">
-                <span id="Icone_ClickBurguer" class="material-icons" onclick="clickMenu()">menu</span>
+            <div class="itens_nav">
+                <nav class="menu">
+                    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open">
+                    <label class="menu-open-button" for="menu-open">
+                        <span class="lines line-1"></span>
+                        <span class="lines line-2"></span>
+                        <span class="lines line-3"></span>
+                    </label>
+
+                    <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+                    <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+                    <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+                    <a href="#" class="menu-item purple"> <i class="fa fa-microphone"></i> </a>
+                    <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+                    <a href="#" class="menu-item lightblue"> <i class="fa fa-diamond"></i> </a>
+                </nav>
             </div>
-
-
-            <!-- Futuros itens de navegação -->
-            <ul class="itens_nav">
-                <li><a href="./cadastroCliente.html">Cadastrar</a></li>
-                <li><a href="..testee">Login</a></li>
-            </ul>
         </nav>
     </header>
-    <div class="container_menu_hamburguer">
-        <header class="header-hamburguer" id="hamburguer"></header>
-    </div>
 </body>
 
 </html>
