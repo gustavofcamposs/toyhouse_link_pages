@@ -260,6 +260,9 @@ html{
 
 .menu-item{
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Começa none e só aparece quando o menu for checado*/
